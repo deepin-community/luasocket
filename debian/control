@@ -1,0 +1,51 @@
+Source: luasocket
+Section: interpreters
+Priority: optional
+Maintainer: Debian Lua Team <pkg-lua-devel@lists.alioth.debian.org>
+Uploaders:
+ Daniel Silverstone <dsilvers@debian.org>,
+ Mathieu Parent <sathieu@debian.org>,
+ Victor Seva <vseva@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-lua (>= 21),
+Standards-Version: 4.6.0.1
+Vcs-Git: https://salsa.debian.org/lua-team/luasocket.git
+Vcs-Browser: https://salsa.debian.org/lua-team/luasocket
+Homepage: http://w3.impa.br/~diego/software/luasocket/
+
+Package: lua-socket
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Provides:
+ ${lua:Provides},
+XB-Lua-Versions: ${lua:Versions}
+Description: TCP/UDP socket library for the Lua language
+ Luasocket provides a TCP/UDP socket library for the Lua language
+ .
+ Also provided are HTTP and SMTP implementations, a simple
+ FTP implementation and some URL parsing functions.
+ .
+ Luasocket supports blocking and non-blocking sockets
+ and also provides a select() interface to the language.
+
+Package: lua-socket-dev
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ lua-socket (= ${binary:Version}),
+ ${misc:Depends},
+Provides:
+ ${lua:Provides},
+XB-Lua-Versions: ${lua:Versions}
+Section: libdevel
+Description: luasocket development files for the Lua language
+ This package provides the development headers and the static
+ libraries for libluasocket.

@@ -1,0 +1,4 @@
+usr/lib/*/liblua5.*-mime.la
+usr/lib/*/liblua5.*-socket-serial.la
+usr/lib/*/liblua5.*-socket-unix.la
+usr/lib/*/liblua5.*-socket.la
